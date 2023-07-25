@@ -11,9 +11,10 @@ import dashtools
 
 yf.pdr_override()
 
-USERNAME_PASSWORD_PAIRS = [['username','password'],['jack','carpenter']]
+USERNAME_PASSWORD_PAIRS = [['username','password'],['gcinfra','gcinfra']]
 
 app = dash.Dash()
+server = app.server
 
 auth = dash_auth.BasicAuth(app, USERNAME_PASSWORD_PAIRS)
 
