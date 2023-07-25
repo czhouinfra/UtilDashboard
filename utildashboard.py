@@ -4,10 +4,8 @@ from dash.dependencies import Input, Output, State
 import plotly.graph_objs as go
 import pandas_datareader.data as pdr
 from datetime import datetime
-import os
 import yfinance as yf
 import dash_auth
-import dashtools
 
 yf.pdr_override()
 
