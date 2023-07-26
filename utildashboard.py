@@ -6,9 +6,18 @@ import plotly.graph_objs as go
 import pandas_datareader.data as pdr
 from datetime import datetime
 import dash_auth
+import glob
 
 USERNAME_PASSWORD_PAIRS = [['username','password'],['gcinfra','gcinfra']]
-
+for file in glob.glob('./*.xlsm'):
+    if '~$' in file:
+        continue
+    else:
+        df = pd.read_excel(
+            file,
+            engine='openpyxl',
+          sheet_name='Contract'
+        )
 df = pd.read_excel('https://github.com/czhouinfra/UtilDashboard/blob/main/Dashboard.xlsm', engine='openpyxl', sheet_name='Contract')
 contract_buyer = df['Column1.buyer'].unique()
 contract_sign_date = df['Column1.original_signing']
