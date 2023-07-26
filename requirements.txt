@@ -6,3 +6,4 @@ pandas-datareader
 plotly
 yfinance
 gunicorn
+openpyxl
