@@ -9,7 +9,7 @@ import dash_auth
 
 USERNAME_PASSWORD_PAIRS = [['username','password'],['gcinfra','gcinfra']]
 
-df = pd.read_excel('https://github.com/czhouinfra/UtilDashboard/blob/main/Dashboard.xlsm', engine='openpyxl', sheet='Contract')
+df = pd.read_excel('https://github.com/czhouinfra/UtilDashboard/blob/main/Dashboard.xlsm', engine='openpyxl', sheet_name='Contract')
 contract_buyer = df['Column1.buyer'].unique()
 contract_sign_date = df['Column1.original_signing']
 contract_volume = df['Column1.contract_volume_mmt']
